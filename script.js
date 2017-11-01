@@ -1,5 +1,8 @@
 /* GLOBAL VARIABLES */
 var listOfProducts;
+
+
+
 // add more global variables when needed..
 
 /* Get products from the json file and store it in a javascript variable */
@@ -14,17 +17,58 @@ fetch("./products.json")
 
 /** Uses the loaded products data to create a visible product list on the website */
 function createUIFromLoadedProducts() {
-    /* Check your console to see that the products are stored in the listOfProducts varible */
-    console.log(listOfProducts);
+    var main = document.getElementById("main");
+    main.className = "mainClass";
 
-    /* Add your code here, remember to brake your code in to
-    smaller function blocks to reduce complexity and increase readability */
-
-    /* Each function must have an explainetory comment like the one for this function, see row 15 */
+    //Looping through listOfProducts and adding products to main div
+    for(var i = 0; i < listOfProducts.length; i++){
+        var product = createProduct(listOfProducts[i]);
+        main.appendChild(product);
+       
+    }
+    //showing main in body.
     
-    /* Feel free to remove these other comments */
+
 }
 
+//Creating function that pulls the products and adding..
+function createProduct(listOfProducts) {
+    var product = document.createElement("div")
+    product.className = "productClass";
 
-/* Read the projects readme before you start! */
-/* Good luck and have fun 🤓 */
+    //.. title
+    var getTitle = document.createElement("h1");
+    getTitle.innerText = listOfProducts.title;
+    product.appendChild(getTitle);
+
+    //.. description
+    var getDescription = document.createElement("h2");
+    getDescription.innerText = listOfProducts.description;
+    product.appendChild(getDescription);
+
+    //.. image
+    var getImage = document.createElement("img");
+    getImage.src = "img/" + listOfProducts.image;
+    product.appendChild(getImage);
+
+    //.. price
+    var GetPrice = document.createElement("p");
+    GetPrice.innerText = listOfProducts.price + " kr";
+    product.appendChild(GetPrice);
+
+    //.. an "add to cart" button.
+    var addCart = document.createElement("button")
+    
+    addCart.innerText = "Lägg till i kundvagnen";
+    product.appendChild(addCart);
+    
+
+
+    
+    
+
+
+    //returning what to function created out from the function
+    return product;
+
+}
