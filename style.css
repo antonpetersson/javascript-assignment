@@ -1,10 +1,8 @@
 body {
     margin: 0px 0px 0px 0px;
-    padding: 50px 0px 0px 0px;
+    padding: 70px 0px 0px 0px;
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
-    
-    
 }
 #header{
     height: 70px;
@@ -17,7 +15,6 @@ body {
 #header h1{
     margin: 15px 15px 15px 15px;
     float: left;
-    
 }
 #cartSpan{
     color: #fff;
@@ -30,51 +27,66 @@ body {
     position: fixed;
     right: 30px;
     top: 15px;
-
 }
 .mainClass{
-    
     margin: 0 auto;
-    
-
 }
 .productClass{
-    
     text-align: center; 
-    
+    height: 100vh;
+    min-height: 800px;
     color: #212121;
     background: linear-gradient(#fff, #F5F5F5);
-    
 }
 
 .productClass h1{
-    font-size: 3.5vw;
+    font-size: 50px;
     padding-top: 3vw;
     margin: 0px;
 }
 .productClass h2{
-    font-size: 1vw;
+    font-size: 16px;
 }
 .productClass img{
     
-    height: 50vh;
+    height: 400px;
 }
 .productClass p{
-    font-size: 1.3vw;
+    font-size: 18px;
     margin-top: 0px;
-    margin-bottom: 1.5vw;
+    margin-bottom: 15px;
 }
 .productClass button{
     background-color: #5596F5;
     color: white;
     text-decoration: none;
     border: none;
-    border-radius: 0.5vw;
-    width: 22vw;
-    height: 3vw;
-    margin-bottom: 5vw;
+    border-radius: 8px;
+    width: 300px;
+    height: 45px;
     
-    
-    font-size: 1.3vw;
+    font-size: 20px;
 }
 
+@media (max-width: 700px) {
+    #header{height: 10vh;}
+    body {padding: 10vh 0px 0px 0px;}
+    .productClass{height: 90vh;}
+    .productClass h1{
+        font-size: 10vw;
+        padding-top: 10vw;
+    }
+    .productClass h2{font-size: 3.5vw;}
+    .productClass img{height: 50vh;}
+    .productClass p{
+        font-size: 4vw;
+        margin-bottom: 3vw;
+    }
+    .productClass button{
+        border-radius: 1.5vw;
+        width: 50vw;
+        height: 7vw;
+        font-size: 3vw;
+    }
+
+}
