@@ -64,7 +64,7 @@ function createProduct(listOfProducts) {
     addCartButton.innerText = "Lägg till i kundvagnen";
     addCartButton.onclick = function() {
         numberOfProducts ++
-        console.log(numberOfProducts)
+        
         cartCount.innerText = numberOfProducts;
     }
     product.appendChild(addCartButton);

@@ -33,10 +33,12 @@ body {
 }
 .productClass{
     text-align: center; 
-    height: 100vh;
+    height: 90vh;
+    max-height: 900px;
     min-height: 800px;
     color: #212121;
     background: linear-gradient(#fff, #F5F5F5);
+    
 }
 
 .productClass h1{
@@ -71,7 +73,7 @@ body {
 @media (max-width: 700px) {
     #header{height: 10vh;}
     body {padding: 10vh 0px 0px 0px;}
-    .productClass{height: 90vh;}
+    .productClass{min-height: 90vh;}
     .productClass h1{
         font-size: 10vw;
         padding-top: 10vw;
