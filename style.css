@@ -19,12 +19,18 @@ body {
     float: left;
     
 }
-#header span{
+#cartSpan{
     color: #fff;
+    position: fixed;
+    right: 70px;
+    top: 15px;
+    font-size: 30px;
+}
+.fa-shopping-cart{
     position: fixed;
     right: 30px;
     top: 15px;
-    font-size: 30px;
+
 }
 .mainClass{
     

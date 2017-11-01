@@ -1,5 +1,8 @@
 /* GLOBAL VARIABLES */
 var listOfProducts;
+var numberOfProducts = 0;
+var cartCount = document.getElementById("cartSpan");
+
 
 
 
@@ -57,10 +60,14 @@ function createProduct(listOfProducts) {
     product.appendChild(GetPrice);
 
     //.. an "add to cart" button.
-    var addCart = document.createElement("button")
-    
-    addCart.innerText = "Lägg till i kundvagnen";
-    product.appendChild(addCart);
+    var addCartButton = document.createElement("button")
+    addCartButton.innerText = "Lägg till i kundvagnen";
+    addCartButton.onclick = function() {
+        numberOfProducts ++
+        console.log(numberOfProducts)
+        cartCount.innerText = numberOfProducts;
+    }
+    product.appendChild(addCartButton);
     
 
 
@@ -70,5 +77,7 @@ function createProduct(listOfProducts) {
 
     //returning what to function created out from the function
     return product;
+    
+    
 
 }
